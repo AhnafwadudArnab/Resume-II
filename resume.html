@@ -83,6 +83,11 @@
       }
 
       .header .contact-line {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2px 8px;
         font-size: 13.5px;
         color: #222;
       }
@@ -92,9 +97,19 @@
         text-decoration: none;
       }
 
-      .header .contact-line span {
-        margin: 0 6px;
+      .header .contact-line .contact-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+      }
+
+      .header .contact-line .separator {
         color: #555;
+      }
+
+      .header .contact-line svg {
+        flex: 0 0 auto;
       }
 
       /* ── Section ── */
@@ -311,69 +326,73 @@
         <h1>Ahnaf Wadud Arnab</h1>
         <div class="subtitle">Full Stack Developer</div>
         <div class="contact-line">
-          📞 +8801996242974
-          <span>|</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="13"
-            viewBox="0 0 24 24"
-            fill="black"
-            style="vertical-align: middle; margin-right: 2px"
-          >
-            <path
-              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
-            />
-          </svg>
-          <a href="mailto:ahanafwadudarnab@gmail.com">
-            ahanafwadudarnab@gmail.com
-          </a>
-          <span>|</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="13"
-            viewBox="0 0 24 24"
-            fill="black"
-            style="vertical-align: middle; margin-right: 2px"
-          >
-            <path
-              d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.804 5.625-5.475 5.92.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.298 24 12c0-6.63-5.37-12-12-12z"
-            />
-          </svg>
-          <a href="https://github.com/AhnafwadudArnab"
-            >github.com/AhnafwadudArnab
-          </a>
-          <span>|</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="black"
-            style="vertical-align: middle; margin-right: 2px"
-          >
-            <path
-              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-            />
-          </svg>
-          <a href="https://www.linkedin.com/in/ahnaf-wadud-arnab-076657245/">
-            linkedin.com/in/ahnaf-wadud-arnab</a
-          >
-          <span>|</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="13"
-            viewBox="0 0 24 24"
-            fill="black"
-            style="vertical-align: middle; margin-right: 2px"
-          >
-            <path
-              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-            />
-          </svg>
-          Zamzam Tower, Middle Badda, Dhaka 1212
+          <span class="contact-item">📞 +8801996242974</span>
+          <span class="separator">|</span>
+          <span class="contact-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="black"
+            >
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+            <a href="mailto:ahanafwadudarnab@gmail.com">
+              ahanafwadudarnab@gmail.com
+            </a>
+          </span>
+          <span class="separator">|</span>
+          <span class="contact-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="black"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.804 5.625-5.475 5.92.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.298 24 12c0-6.63-5.37-12-12-12z"
+              />
+            </svg>
+            <a href="https://github.com/AhnafwadudArnab"
+              >github.com/AhnafwadudArnab
+            </a>
+          </span>
+          <span class="separator">|</span>
+          <span class="contact-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="black"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+            <a href="https://www.linkedin.com/in/ahnaf-wadud-arnab-076657245/">
+              linkedin.com/in/ahnaf-wadud-arnab</a
+            >
+          </span>
+          <span class="separator">|</span>
+          <span class="contact-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="black"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              />
+            </svg>
+            Zamzam Tower, Middle Badda, Dhaka 1212
+          </span>
         </div>
       </div>
 
@@ -381,9 +400,9 @@
         <div class="section-title">Summary</div>
         <p>
           Full Stack Developer with hands-on experience building cross-platform
-          mobile and web applications using Flutter, Dart, React Native,
+          mobile and web applications using Flutter, React Native,
           Node.js, Express.js, Firebase, and MySQL. Strong foundation in clean
-          architecture, RESTful API integration, backend development, and
+          architecture, RESTful API integration, backend development and
           full-stack application delivery. Passionate about building efficient,
           user-focused software solutions that solve real-world problems.
         </p>
@@ -406,12 +425,12 @@
           </tr>
           <tr>
             <td>Database:</td>
-            <td>MySQL, Firebase, MongoDB</td>
+            <td>MySQL, Firebase, Supabase</td>
           </tr>
           <tr>
             <td>Tools:</td>
             <td>
-              Git, GitHub, Android Studio, Figma, npm, Vercel, VS Code
+              Git, GitHub, Android Studio, Figma, Vercel, VS Code
             </td>
           </tr>
         </table>
@@ -504,8 +523,8 @@
             <strong>Live:</strong>
             <a href="https://electrozonebd.com">electrozonebd.com</a>
             &nbsp;|&nbsp; <strong>GitHub:</strong>
-            <a href="https://github.com/AhnafwadudArnab"
-              >github.com/AhnafwadudArnab</a
+            <a href="https://github.com/AhnafwadudArnab/Electrozonebd"
+              >github.com/AhnafwadudArnab/Electrozonebd</a
             >
           </div>
         </div>
@@ -658,13 +677,6 @@
       </div>
 
       <div class="section">
-        <div class="section-title">Certifications</div>
-        <ul class="bullet-list">
-          <li>Java Basic Certificate – HackerRank (2023)</li>
-        </ul>
-      </div>
-
-      <div class="section">
         <div class="section-title">Research Work</div>
         <ul class="bullet-list">
           <li>
@@ -675,6 +687,36 @@
             Working on a machine learning-based brain tumor detection system
             using federated learning and explainable AI techniques.
           </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Certifications</div>
+        <ul class="bullet-list">
+          <li>
+            <a href="https://www.hackerrank.com/certificates/74d61d840c1a"
+              >Java Basic Certificate – HackerRank (2023)</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Problem-Solving Profiles</div>
+        <ul class="bullet-list">
+          <li>
+            HackerRank:
+            <a href="https://www.hackerrank.com/profile/ahanafwadudarnob"
+              >hackerrank.com/profile/ahanafwadudarnob</a
+            >
+          </li>
+          <li>
+            LeetCode:
+            <a href="https://leetcode.com/u/OTjQKVxs6f/"
+              >leetcode.com/u/OTjQKVxs6f</a
+            >
+          </li>
+          <li>Codeforces</li>
         </ul>
       </div>
 
